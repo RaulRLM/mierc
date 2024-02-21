@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🕹️ BuScAmInAs 🕹️</title>
+    <link id="estilo" href="css/estilo1.css" type="text/css" rel="stylesheet">
+    <link rel="icon" href="Imatges/favicon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+</head>
+<body>
+<div>
+    <h1 class="primerh1">B u s c a m i n a s</h1>
+    <div id="temporizador">Tiempo: <span id="tiempo">0</span> segundos</div> <!-- Temporizador -->
+    <div id="board"></div>
+    <audio id="bubbleSound" src="bubble.mp3" preload="auto"></audio>
+    <audio id="explosionAudio" preload="auto">
+        <source src="large-underwater-explosion-190270.mp3" type="audio/mpeg">
+    </audio>
+    <video id="video" onended="videoEnded()" preload="auto">
+        <source src="explosion-16640.webm" type="video/mp4">
+    </video>
+    <div id="estado"><div>Nº de minas restante: <span id="numMinasRestantes"></span></div></div>
+    <br>
+    <div id="divgenerar">
+        <label for="minas">M i n a s </label>
+        <input id="minas" type="number" value="30"/>
+        <br>
+        <label for="columnas">C ol u m n a s</label>
+        <input id="columnas" type="number" value="12"/>
+        <br>
+        <label for="filas"> F i l a s </label>
+        <input id="filas" type="number" value="12"/>
+        <br>
+        <button id="generar"onclick="principal();">Generar / Reiniciar</button>
+        <br>
+        <button id="iconos0"onclick="iconos0();"><img src="css/mina.svg" alt="Icono de mina"></button>
+        <button id="iconos1"onclick="iconos1();"><img src="css/mina1.svg" alt="Icono de mina"></button>
+        <button id="iconos2"onclick="iconos2();"><img src="css/mina2.svg" alt="Icono de mina"></button>
+        <button id="iconos3"onclick="iconos3();"><img src="css/mina3.svg" alt="Icono de mina"></button>
+        <br>
+        <br>
+        <button id="estilo0"onclick="estilo0();">Estilo 0</button>
+        <button id="estilo1"onclick="estilo1();">Estilo 1</button>
+        <button id="estilo2"onclick="estilo2();">Estilo 2</button>
+        <br>
+    </div>
+    <div id="ingresarNombreContainer">
+        <div class="ganaste">
+            <h1> GANASTEEE!</h1>
+
+           <img class="imgwin" src="Imatges/winner-on-podium-with-trophy-svgrepo-com.svg" width="15%" height="15%">
+            <div class="texto"> Pulsa F5 para refrescar la página y jugar de nuevo</div>
+        </div>
+</div>
+<div id="gameOverContainer" class="gmhidden">
+    <h1 class="h1buscaminas2">Game Over</h1>
+    <div class="temporizador" style="font-weight: bold;">Moriste en <span class="tiempo">0</span> segundos </div>
+</div>
+<script src="js/funciones.js"></script>
+</body>
+</html>
